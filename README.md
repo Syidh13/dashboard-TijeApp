@@ -1,1 +1,1 @@
-# dashboard_tijeapp
+# dashboard-TijeApp
