@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-leftnav {
+    @apply bg-white dark:bg-[#0f172a];
+  }
+  .bg-hoverLeftnav {
+    @apply dark:hover:bg-slate-800 hover:bg-slate-100;
+  }
+  .bg-stroke {
+    @apply border-slate-200 dark:border-[#1b2336];
+  }
+
+  .bg-textPrimary {
+    @apply text-slate-800 dark:text-white;
+  }
+  .bg-mainbackground {
+    @apply bg-slate-100 dark:bg-[#121a2d];
+  }
+  .btn-leftNav-on {
+    @apply bg-gradient-to-b from-blue-500 to-blue-600 rounded-md text-white p-2 transition-colors dark:text-white flex space-x-2;
+  }
+  .btn-leftNav-normal {
+    @apply bg-hoverLeftnav rounded-md p-2 hover:text-blue-500 transition-colors text-slate-500 flex space-x-2;
+  }
+}

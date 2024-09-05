@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Notification</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-mainbackground">
+    <!-- start left nav desktop -->
+    <div class="bg-leftnav w-72 h-screen hidden md:block fixed">
+        <!-- logo -->
+        <div class="px-5 border-b bg-stroke h-20 bg-leftnav absolute w-full dark:hidden flex border-r">
+            <img src="../asset/logo-horizontal-color.svg" alt="" class="h-9 my-auto">
+        </div>
+        <div class="px-5 border-b bg-stroke h-20 bg-leftnav absolute w-full dark:flex hidden border-r">
+            <img src="../asset/logo-horizontal-white.svg" alt="" class="h-9 my-auto">
+        </div>
+        <!-- end logo -->
+
+        <!-- menu -->
+        <section class="pt-24 pb-20 px-5 overflow-auto h-screen no-scrollbar bg-stroke space-y-5 z-10 border-r">
+            <div class="text-xs uppercase text-slate-500 font-primary tracking-widest">Menu</div>
+            <ul class="space-y-1">
+                <!-- notification -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-on">
+                            <i data-lucide="bell" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Notification</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end notification -->
+
+                <!-- Ticketing -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="ticket" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Ticketing</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Ticketing -->
+
+                <!-- Banner -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="newspaper" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Banner</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Banner -->
+
+                <!-- User Tije -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="users" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">User Tije</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end User Tije -->
+                <!-- Post -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="gallery-vertical" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Post</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Post -->
+
+                <!-- Complaint -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="speech" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Complaint</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Complaint -->
+            </ul>
+        </section>
+        <!-- end menu -->
+
+    </div>
+    <!-- end left nav desktop -->
+
+    <section class="pl-72">
+        <!-- header -->
+        <div class="sticky top-0 z-50">
+            <div class="h-20 px-5 flex justify-between  bg-leftnav bg-stroke border-b  w-full z-40">
+                <!-- leftnav expande button -->
+                <button
+                    class="h-11 w-11 flex my-auto justify-center bg-textPrimary transition-colors rounded-full hover:dark:bg-slate-800">
+                    <i data-lucide="menu" class="my-auto h-4"></i>
+                </button>
+                <!-- end leftnav expande button -->
+                <!-- right header button -->
+                <div class="flex space-x-4">
+                    <button
+                        class="h-11 w-11 flex my-auto justify-center bg-textPrimary transition-colors rounded-full hover:dark:bg-slate-800">
+                        <i data-lucide="sun" class="bg-textPrimary my-auto"></i>
+                    </button>
+                    <a href="#" class="my-auto">
+                        <img src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="" class="rounded-full border-white  h-8 w-8 object-cover">
+                    </a>
+                </div>
+                <!-- end right header button -->
+            </div>
+        </div>
+        <!-- end header -->
+
+        <!-- main display -->
+        <div class="">
+
+            <div class="flex justify-between px-5 bg-leftnav bg-stroke dark:border-none border-b h-16">
+                <!-- title -->
+                <div class="text-xl font-primary tracking-wide font-bold  bg-textPrimary my-auto">
+                    Notification</div>
+                <!-- End title -->
+                <!-- button create -->
+                <button class="">
+                    <div class="bg-blue-500 flex px-3 h-10 rounded-md uppercase text-xs text-white font-primary">
+                        <div class="my-auto">Create Notification</div>
+                    </div>
+                </button>
+                <!-- end button create -->
+
+            </div>
+
+            <!-- table -->
+            <section class="py-4 font-primary px-5">
+                <div class="relative overflow-x-auto rounded-md">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Date
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Time
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Title
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Description
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100 ">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                <th scope="row"
+                                    class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                    24 April 2024
+                                </th>
+                                <td class="px-6 py-4 text-base whitespace-nowrap">
+                                    12:54 AM
+                                </td>
+                                <td class="px-6 py-4 text-base ">
+                                    Pengalihan Rute 8
+                                </td>
+                                <td class="px-6 py-4 text-base">
+                                    Rute 8 : Kebayoran - Permata Hijau. Mengalami pengalihan rute dikarenakann adanya
+                                    penutupan jalan di sekitar Jl. Simprug.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+            <!-- end table -->
+
+        </div>
+        <!-- end main display -->
+    </section>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
