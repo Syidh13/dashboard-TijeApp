@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Ticketing</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-mainbackground">
+    <!-- start left nav desktop -->
+    <div class="bg-leftnav w-72 h-screen hidden md:block fixed">
+        <!-- logo -->
+        <div class="px-5 border-b bg-stroke h-20 bg-leftnav absolute w-full dark:hidden flex border-r">
+            <img src="../asset/logo-horizontal-color.svg" alt="" class="h-9 my-auto">
+        </div>
+        <div class="px-5 border-b bg-stroke h-20 bg-leftnav absolute w-full dark:flex hidden border-r">
+            <img src="../asset/logo-horizontal-white.svg" alt="" class="h-9 my-auto">
+        </div>
+        <!-- end logo -->
+
+        <!-- menu -->
+        <section class="pt-24 pb-20 px-5 overflow-auto h-screen no-scrollbar bg-stroke space-y-5 z-10 border-r">
+            <div class="text-xs uppercase text-slate-500 font-primary tracking-widest">Menu</div>
+            <ul class="space-y-1">
+                <!-- notification -->
+                <li>
+                    <a href="./index.html">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="bell" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Notification</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end notification -->
+
+                <!-- Ticketing -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-on">
+                            <i data-lucide="ticket" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Ticketing</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Ticketing -->
+
+                <!-- Banner -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="newspaper" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Banner</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Banner -->
+
+                <!-- User Tije -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="users" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">User Tije</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end User Tije -->
+                <!-- Post -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="gallery-vertical" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Post</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Post -->
+
+                <!-- Complaint -->
+                <li>
+                    <a href="#">
+                        <div class="btn-leftNav-normal">
+                            <i data-lucide="speech" class="h-[1.125rem] my-auto"></i>
+                            <div class="font-primary text-sm font-regular tracking-wider">Complaint</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- end Complaint -->
+            </ul>
+        </section>
+        <!-- end menu -->
+
+    </div>
+    <!-- end left nav desktop -->
+
+    <section class="pl-72">
+        <!-- header -->
+        <div class="sticky top-0 z-50">
+            <div class="h-20 px-5 flex justify-between  bg-leftnav bg-stroke border-b  w-full z-40">
+                <!-- leftnav expande button -->
+                <button
+                    class="h-11 w-11 flex my-auto justify-center bg-textPrimary transition-colors rounded-full hover:dark:bg-slate-800">
+                    <i data-lucide="menu" class="my-auto h-4"></i>
+                </button>
+                <!-- end leftnav expande button -->
+                <!-- right header button -->
+                <div class="flex space-x-4">
+                    <button
+                        class="h-11 w-11 flex my-auto justify-center bg-textPrimary transition-colors rounded-full hover:dark:bg-slate-800">
+                        <i data-lucide="sun" class="bg-textPrimary my-auto"></i>
+                    </button>
+                    <a href="#" class="my-auto">
+                        <img src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="" class="rounded-full border-white  h-8 w-8 object-cover">
+                    </a>
+                </div>
+                <!-- end right header button -->
+            </div>
+        </div>
+        <!-- end header -->
+
+        <!-- main display -->
+        <div class="">
+
+            <div class="flex justify-between px-5 bg-leftnav bg-stroke dark:border-none border-b h-16">
+                <!-- title -->
+                <div class="text-xl font-primary tracking-wide font-bold  bg-textPrimary my-auto">
+                    Ticketing</div>
+                <!-- End title -->
+
+                <div class="flex space-x-3">
+                    <!-- date button -->
+                    <button>
+                        <div class="border bg-stroke rounded-md h-10  flex">
+                            <input type="date" class="bg-textPrimary bg-transparent my-auto px-3">
+                        </div>
+                    </button>
+                    <!-- end date button -->
+
+                    <!-- button create -->
+                    <button>
+                        <div class="bg-blue-500 flex px-3 h-10 rounded-md uppercase text-xs text-white font-primary">
+                            <div class="my-auto font-primary">Create Ticket Type</div>
+                        </div>
+                    </button>
+                    <!-- end button create -->
+                </div>
+
+            </div>
+
+            <section class="py-5 space-y-6">
+
+                <!-- ==========================
+                 ==========  card  ============ 
+                 ============================== -->
+                <section class="grid grid-cols-4 px-5 gap-3">
+                    <!-- card today income -->
+                    <div class="bg-card p-4 rounded-md space-y-2">
+                        <div class="font-primary bg-textSecondary text-sm">Today's income</div>
+                        <div class="font-primary bg-textPrimary text-3xl">Rp 152.000.000</div>
+                    </div>
+                    <!-- end card today income -->
+                    <!-- card User Transaction -->
+                    <div class="bg-card p-4 rounded-md space-y-2">
+                        <div class="font-primary bg-textPrimary text-sm bg-textSecondary">User Transaction
+                        </div>
+                        <div class="font-primary bg-textPrimary text-3xl">43.428</div>
+                    </div>
+                    <!-- end card User Transaction -->
+                </section>
+                <!-- ==========================
+                 ==========  end card  ============ 
+                 ============================== -->
+
+
+                <!-- ==========================
+                 ==========  Ticket Variant  ============ 
+                 ============================== -->
+                <section class="px-5 space-y-2">
+                    <div class="font-primary bg-textPrimary text-lg bg-textPrimary font-bold">Ticket Variant</div>
+                    <!-- card -->
+                    <section class="grid gap-3 grid-cols-5">
+                        <!-- card 1 -->
+                        <div class="rounded-md bg-card relative">
+                            <!-- img -->
+                            <img src="https://images.pexels.com/photos/45923/pexels-photo-45923.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                class="rounded-t-md aspect-video object-cover w-full" alt="">
+                            <!-- title -->
+                            <div class="p-3">
+                                <div class="font-primary bg-textSecondary text-bold">Royaltrans</div>
+                                <div class="font-primary bg-textPrimary text-lg">Rp 3.500</div>
+                            </div>
+                            <!-- edit button -->
+                            <div class="absolute top-2 right-2">
+                                <button class="h-10 w-10 bg-black/50 rounded-full flex justify-center">
+                                    <i data-lucide="pen" class="text-white my-auto h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end card 1 -->
+                        <!-- card 2 -->
+                        <div class="rounded-md bg-card relative">
+                            <!-- img -->
+                            <img src="https://images.pexels.com/photos/45923/pexels-photo-45923.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                class="rounded-t-md aspect-video object-cover w-full" alt="">
+                            <!-- title -->
+                            <div class="p-3">
+                                <div class="font-primary bg-textSecondary text-bold">Royaltrans</div>
+                                <div class="font-primary bg-textPrimary text-lg">Rp 3.500</div>
+                            </div>
+                            <!-- edit button -->
+                            <div class="absolute top-2 right-2">
+                                <button class="h-10 w-10 bg-black/50 rounded-full flex justify-center">
+                                    <i data-lucide="pen" class="text-white my-auto h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end card 2 -->
+                        <!-- card 3 -->
+                        <div class="rounded-md bg-card relative">
+                            <!-- img -->
+                            <img src="https://images.pexels.com/photos/45923/pexels-photo-45923.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                class="rounded-t-md aspect-video object-cover w-full" alt="">
+                            <!-- title -->
+                            <div class="p-3">
+                                <div class="font-primary bg-textSecondary text-bold">Royaltrans</div>
+                                <div class="font-primary bg-textPrimary text-lg">Rp 3.500</div>
+                            </div>
+                            <!-- edit button -->
+                            <div class="absolute top-2 right-2">
+                                <button class="h-10 w-10 bg-black/50 rounded-full flex justify-center">
+                                    <i data-lucide="pen" class="text-white my-auto h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end card 3 -->
+                    </section>
+                    <!-- end card -->
+                </section>
+
+                <!-- ==========================
+                 ==========  end Ticket Variant  ============ 
+                 ============================== -->
+
+                <!-- ==========================
+                 ==========  User Payments History  ============ 
+                 ============================== -->
+                <section class="px-5 space-y-2">
+                    <div class="font-primary bg-textPrimary text-lg bg-textPrimary font-bold">User Payments History
+                    </div>
+
+                    <section class="flex justify-between">
+                        <div>
+                            <!-- filter View All Payment Category -->
+                            <button>
+                                <div
+                                    class="bg-card border bg-stroke flex px-3 h-10 rounded-md uppercase text-xs text-white font-primary space-x-2">
+                                    <div class="my-auto font-primary bg-textPrimary">View All Payment Category</div>
+                                    <i data-lucide="chevron-down" class="my-auto w-4 bg-textPrimary"></i>
+                                </div>
+                            </button>
+                            <!-- end filter View All Payment Category -->
+                            <!-- filter View All Ticket Type -->
+                            <button>
+                                <div
+                                    class="bg-card border bg-stroke flex px-3 h-10 rounded-md uppercase text-xs text-white font-primary space-x-2">
+                                    <div class="my-auto font-primary bg-textPrimary">View All Ticket Type</div>
+                                    <i data-lucide="chevron-down" class="my-auto w-4 bg-textPrimary"></i>
+                                </div>
+                            </button>
+                            <!-- end filter View All Ticket Type -->
+                        </div>
+
+                        <!-- Search -->
+                        <form class="example bg-white h-10 rounded-md px-3 flex" action="action_page.php">
+                            <input type="text" placeholder="Search.." name="search" class="font-primary">
+                            <button type="submit"><i data-lucide="search" class="my-auto w-4"></i></button>
+                        </form>
+                        <!-- end Search -->
+
+                    </section>
+
+                    <!-- table -->
+                    <section>
+                        <div class="relative overflow-x-auto rounded-md">
+                            <table
+                                class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 font-primary">
+                                <thead
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            No. Transaction
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Date
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Payment Category
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Ticket Type
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Nominal Payment
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 dark:hover:bg-slate-900 hover:bg-slate-100">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-bold text-base text-gray-900 whitespace-nowrap dark:text-white">
+                                            8437658476592437483
+                                        </th>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            25 April 2024
+                                        </td>
+                                        <td class="px-6 py-4 text-base  whitespace-nowrap">
+                                            BCA - Virtual Account
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Regular
+                                        </td>
+                                        <td class="px-6 py-4 text-base whitespace-nowrap">
+                                            Rp 3.500
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+                    <!-- end table -->
+                </section>
+                <!-- ==========================
+                 ==========  end User Payments History  ============ 
+                 ============================== -->
+
+
+            </section>
+
+        </div>
+        <!-- end main display -->
+    </section>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

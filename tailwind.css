@@ -16,8 +16,14 @@
   .bg-textPrimary {
     @apply text-slate-800 dark:text-white;
   }
+  .bg-textSecondary {
+    @apply text-slate-400 dark:text-white;
+  }
   .bg-mainbackground {
     @apply bg-slate-100 dark:bg-[#121a2d];
+  }
+  .bg-card {
+    @apply bg-white dark:bg-gray-700;
   }
   .btn-leftNav-on {
     @apply bg-gradient-to-b from-blue-500 to-blue-600 rounded-md text-white p-2 transition-colors dark:text-white flex space-x-2;
