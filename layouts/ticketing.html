@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Ticketing</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -101,8 +102,8 @@
 
     <section class="pl-72">
         <!-- header -->
-        <div class="sticky top-0 z-50">
-            <div class="h-20 px-5 flex justify-between  bg-leftnav bg-stroke border-b  w-full z-40">
+        <div class="sticky top-0 z-40">
+            <div class="h-20 px-5 flex justify-between  bg-leftnav bg-stroke border-b  w-full z-30">
                 <!-- leftnav expande button -->
                 <button
                     class="h-11 w-11 flex my-auto justify-center bg-textPrimary transition-colors rounded-full hover:dark:bg-slate-800">
@@ -126,7 +127,7 @@
         <!-- end header -->
 
         <!-- main display -->
-        <div class="">
+        <div>
 
             <div class="flex justify-between px-5 bg-leftnav bg-stroke dark:border-none border-b h-16">
                 <!-- title -->
@@ -144,11 +145,68 @@
                     <!-- end date button -->
 
                     <!-- button create -->
-                    <button>
-                        <div class="bg-blue-500 flex px-3 h-10 rounded-md uppercase text-xs text-white font-primary">
+                    <section class="flex" x-data="{ open: false }">
+                        <button @click="open = ! open"
+                            class="bg-blue-500 flex my-auto px-3 h-10 rounded-md uppercase text-xs text-white font-primary">
                             <div class="my-auto font-primary">Create Ticket Type</div>
+                        </button>
+                        <div x-show="open" x-transition class="fixed top-0 h-full w-full bg-black/50 left-0 z-50">
+                            <div class="flex justify-center h-full">
+                                <!-- card modal create -->
+                                <div class="my-auto bg-card rounded-md w-full max-w-2xl p-6 space-y-4">
+                                    <section class="flex justify-between pb-4">
+                                        <div class="font-primary bg-textPrimary font-bold text-xl my-auto">Create
+                                            Ticketing</div>
+                                        <button @click="open = ! open">
+                                            <i data-lucide="x" class="bg-textPrimary"></i>
+                                        </button>
+                                    </section>
+                                    <!-- form -->
+                                    <section class="grid grid-cols-2 gap-3">
+                                        <section class="font-primary bg-textPrimary w-full space-y-2">
+                                            <h1>Nama Tiket</h1>
+                                            <input type="text" name="" id=""
+                                                class="w-full rounded-sm h-10 bg-mainbackground px-2">
+                                        </section>
+                                        <section class="font-primary bg-textPrimary w-full space-y-2">
+                                            <h1>Harga</h1>
+                                            <input type="text" name="" id=""
+                                                class="w-full rounded-sm h-10 bg-mainbackground px-2">
+                                        </section>
+                                    </section>
+                                    <!-- upload -->
+                                    <section class="w-full">
+                                        <div
+                                            class="rounded-sm border-dashed h-44 flex justify-center bg-mainbackground">
+                                            <div class="my-auto space-y-2">
+                                                <i data-lucide="upload" class="bg-textPrimary mx-auto"></i>
+                                                <div>
+                                                    <h1 class="bg-textPrimary text-center font-primary text-sm">Drag &
+                                                        Drop
+                                                        or
+                                                        <span class="text-blue-500">Choose file</span> to upload
+                                                    </h1>
+                                                    <h2 class="font-primary text-center bg-textSecondary text-xs">1080 x
+                                                        1080</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- button create -->
+                                    <section class="flex justify-end">
+                                        <div>
+                                            <button class="px-3 py-2 bg-blue-500 rounded-md">
+                                                <div class="font-primary text-base  text-white">Create Ticket
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </section>
+                                </div>
+                                <!-- end card modal create -->
+                            </div>
                         </div>
-                    </button>
+                    </section>
                     <!-- end button create -->
                 </div>
 
@@ -186,8 +244,10 @@
                     <div class="font-primary bg-textPrimary text-lg bg-textPrimary font-bold">Ticket Variant</div>
                     <!-- card -->
                     <section class="grid gap-3 grid-cols-5">
+
+
                         <!-- card 1 -->
-                        <div class="rounded-md bg-card relative">
+                        <div class="rounded-md bg-card relative" x-data="{ open: false }">
                             <!-- img -->
                             <img src="https://images.pexels.com/photos/45923/pexels-photo-45923.jpeg?auto=compress&cs=tinysrgb&w=1200"
                                 class="rounded-t-md aspect-video object-cover w-full" alt="">
@@ -198,12 +258,87 @@
                             </div>
                             <!-- edit button -->
                             <div class="absolute top-2 right-2">
-                                <button class="h-10 w-10 bg-black/50 rounded-full flex justify-center">
+                                <button class="h-10 w-10 bg-black/50 rounded-full flex justify-center"
+                                    @click="open = ! open">
                                     <i data-lucide="pen" class="text-white my-auto h-5"></i>
                                 </button>
+                                <!-- modal edit card -->
+                                <div x-show="open" x-transition
+                                    class="fixed top-0 h-full w-full bg-black/50 left-0 z-50">
+                                    <div class="flex justify-center h-full">
+                                        <!-- card modal create -->
+                                        <div class="my-auto bg-card rounded-md w-full max-w-2xl p-6 space-y-4">
+                                            <section class="flex justify-between pb-4">
+                                                <div class="font-primary bg-textPrimary font-bold text-xl my-auto">
+                                                    Create
+                                                    Ticketing</div>
+                                                <button @click="open = ! open">
+                                                    <i data-lucide="x" class="bg-textPrimary"></i>
+                                                </button>
+                                            </section>
+                                            <!-- form -->
+                                            <section class="grid grid-cols-2 gap-3">
+                                                <section class="font-primary bg-textPrimary w-full space-y-2">
+                                                    <h1>Nama Tiket</h1>
+                                                    <input type="text" name="" id=""
+                                                        class="w-full rounded-sm h-10 bg-mainbackground px-2">
+                                                </section>
+                                                <section class="font-primary bg-textPrimary w-full space-y-2">
+                                                    <h1>Harga</h1>
+                                                    <input type="text" name="" id=""
+                                                        class="w-full rounded-sm h-10 bg-mainbackground px-2">
+                                                </section>
+                                            </section>
+                                            <!-- upload -->
+                                            <section class="w-full">
+                                                <div
+                                                    class="rounded-sm border-dashed h-44 flex justify-center bg-mainbackground">
+                                                    <div class="my-auto space-y-2">
+                                                        <i data-lucide="upload" class="bg-textPrimary mx-auto"></i>
+                                                        <div>
+                                                            <h1 class="bg-textPrimary text-center font-primary text-sm">
+                                                                Drag &
+                                                                Drop
+                                                                or
+                                                                <span class="text-blue-500">Choose file</span> to upload
+                                                            </h1>
+                                                            <h2
+                                                                class="font-primary text-center bg-textSecondary text-xs">
+                                                                1080 x
+                                                                1080</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                            <!-- button create -->
+                                            <section class="flex justify-between">
+                                                <!-- delete -->
+                                                <div>
+                                                    <button
+                                                        class="px-3 py-2  rounded-md hover:dark:bg-slate-800 transition-colors hover:bg-slate-100">
+                                                        <div class="font-primary text-base text-red-500">Delete
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <!-- save -->
+                                                <div>
+                                                    <button class="px-3 py-2 bg-blue-500 rounded-md">
+                                                        <div class="font-primary text-base  text-white">Save
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <!-- end card modal create -->
+                                    </div>
+                                </div>
+                                <!-- end modal edit card -->
                             </div>
                         </div>
                         <!-- end card 1 -->
+
+
                         <!-- card 2 -->
                         <div class="rounded-md bg-card relative">
                             <!-- img -->
